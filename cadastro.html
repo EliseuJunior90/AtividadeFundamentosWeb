@@ -7,24 +7,39 @@
     <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-    <header>
-        <h1>Cadastro de voluntários</h1>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="projeto.html">Salve um Cururu</a> |
-            <a href="cadastro.html">Cadastro</a>
-        </nav>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="brand">Cururu Vida</a>
+            <nav class="main-nav" aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projeto.html">Salve um Cururu</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </nav>
+
+            <input id="nav-toggle" class="nav-toggle" type="checkbox" aria-hidden="true">
+            <button class="hamburger" aria-controls="mobile-nav" aria-label="Abrir menu">☰</button>
+            <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projeto.html">Salve um Cururu</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section class="Signup Section">
-            <h2>Formulário de cadastro de voluntários</h2>
+        <div class="container">
+            <section class="card Signup Section">
+                <h2>Formulário de cadastro de voluntários</h2>
 
-            <div class="Sucess-message" id="sucessmessage" style="display:none;">
-                Cadastro realizado com sucesso!
-            </div>
+                <div class="alert alert-success" id="sucessmessage" style="display:none;">
+                    Cadastro realizado com sucesso!
+                </div>
 
-            <form id="volunteerform" onsubmit="handleSubmit(event)">
+                <form id="volunteerform" onsubmit="handleSubmit(event)">
                 <fieldset>
                     <legend>Dados pessoais</legend>
 
@@ -103,7 +118,7 @@
                     </div>
                 </fieldset>
 
-                <button type="submit">Enviar cadastro</button>
+                <button type="submit" class="btn btn-primary">Enviar cadastro</button>
             </form>
         </section>
     </main>

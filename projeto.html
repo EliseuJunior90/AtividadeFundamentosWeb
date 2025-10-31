@@ -1,57 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projetos - Cururu Vida</title>
-</head>
-<body>
-  <header>
-    <h1>Projetos Cururu Vida</h1>
-    <nav>
-      <a href="index.html">Início</a> |
-      <a href="projeto.html">Salve um Cururu</a> |
-      <a href="cadastro.html">Cadastro</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projetos - Cururu Vida</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a href="index.html" class="brand">Cururu Vida</a>
+        <nav class="main-nav" aria-label="Menu principal">
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projeto.html">Salve um Cururu</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+          </ul>
+        </nav>
 
-  <main>
-    <section>
-      <h2>Reabilitação dos Cururus</h2>
-      <p>
-        Nosso principal projeto visa reabilitar sapos-cururu resgatados de áreas urbanas e ambientes degradados.
-        Realizamos triagem, tratamento veterinário e reinserção gradual desses animais em habitats naturais seguros.
-      </p>
-    </section>
+        <input id="nav-toggle" class="nav-toggle" type="checkbox" aria-hidden="true" />
+        <button class="hamburger" aria-controls="mobile-nav" aria-label="Abrir menu">☰</button>
+        <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projeto.html">Salve um Cururu</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-    <section>
-      <h2>Educação Ambiental</h2>
-      <p>
-        Promovemos palestras, oficinas e eventos em escolas e comunidades para conscientizar sobre a importância dos
-        anfíbios no equilíbrio ecológico e na manutenção dos ecossistemas.
-      </p>
-    </section>
+    <main>
+      <div class="container">
+        <h1>Projetos Cururu Vida</h1>
 
-    <section>
-      <h2>Monitoramento Ecológico</h2>
-      <p>
-        Em parceria com universidades e órgãos ambientais, monitoramos populações de sapos-cururu reintroduzidos
-        para avaliar o sucesso da reinserção e os impactos ambientais positivos do projeto.
-      </p>
-    </section>
+        <section class="projects-grid">
+          <article class="project-card">
+            <img src="img/Reabilitados.png" alt="Cururus Reabilitados" />
+            <div class="card-body">
+              <h3>Reabilitação dos Cururus</h3>
+              <p>
+                Nosso principal projeto visa reabilitar sapos-cururu resgatados de áreas urbanas e ambientes degradados. Realizamos
+                triagem, tratamento veterinário e reinserção gradual desses animais em habitats naturais seguros.
+              </p>
+            </div>
+          </article>
 
-    <section>
-      <h2>Como Ajudar</h2>
-      <p>
-        Você pode participar como voluntário, fazer doações ou divulgar nosso trabalho. Toda ajuda contribui para o
-        futuro dos sapos-cururu e para a preservação da biodiversidade brasileira. Aceitamos doações via PIX na Chave <b>Salveumcururu@alegria.com</b>
-      </p>
-      <a href="cadastro.html">Cadastre-se e participe!</a>
-    </section>
-  </main>
+          <article class="project-card">
+            <img src="img/Palestrante.png" alt="Hugo explicando sobre os Cururus" />
+            <div class="card-body">
+              <h3>Educação Ambiental</h3>
+              <p>
+                Promovemos palestras, oficinas e eventos em escolas e comunidades para conscientizar sobre a importância dos anfíbios no
+                equilíbrio ecológico e na manutenção dos ecossistemas.
+              </p>
+            </div>
+          </article>
 
-  <footer>
-    <p>&copy; 2025 Cururu Vida - Todos os direitos reservados.</p>
-  </footer>
-</body>
+          <article class="project-card">
+            <img src="img/Biologos.png" alt="Cururus sendo monitorados" />
+            <div class="card-body">
+              <h3>Monitoramento Ecológico</h3>
+              <p>
+                Em parceria com universidades e órgãos ambientais, monitoramos populações de sapos-cururu reintroduzidos para avaliar o
+                sucesso da reinserção e os impactos ambientais positivos do projeto.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="img/Ajude.png" alt="Como ajudar" />
+            <div class="card-body">
+              <h3>Como Ajudar</h3>
+              <p>
+                Você pode participar como voluntário, fazer doações ou divulgar nosso trabalho. Toda ajuda contribui para o futuro dos
+                sapos-cururu e para a preservação da biodiversidade brasileira.
+              </p>
+              <p><strong>PIX:</strong> <code>Salveumcururu@alegria.com</code></p>
+              <a class="btn btn-primary" href="cadastro.html">Cadastre-se e participe!</a>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Cururu Vida - Todos os direitos reservados.</p>
+      </div>
+    </footer>
+  </body>
 </html>
