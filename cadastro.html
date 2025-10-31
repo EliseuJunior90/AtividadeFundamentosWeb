@@ -31,7 +31,7 @@
     </header>
 
     <main>
-        <div class="container">
+        <div id="app" class="container">
             <section class="card Signup Section">
                 <h2>Formulário de cadastro de voluntários</h2>
 
@@ -127,5 +127,14 @@
         <p>&copy; 2025 Cururu Vida - Todos os direitos reservados.</p>
     </footer>
 
+    <script src="app.js" defer></script>
+
     <script>
-        function handleSubmit(event) {
+        // legacy hook: handleSubmit used in HTML attribute; delegating to app.js implementation
+        function handleSubmit(event){
+            if(window.app && typeof window.app.handleSubmit === 'function'){
+                return window.app.handleSubmit(event);
+            }
+            // fallback: prevent form submit
+            event.preventDefault();
+        }
