@@ -1,13 +1,6 @@
-/* ==================================================
-   Design system e estilos principais - Style.css
-   - Variáveis CSS (cores, tipografia, espaçamentos)
-   - Grid 12 colunas, utilitários flex, breakpoints
-   - Menu responsivo (dropdown + hambúrguer), cards,
-     botões, formulários, feedbacks, badges
-   ================================================== */
 
 :root{
-  /* --- Paleta (min 8 cores e variações) --- */
+  
   --color-primary-900:#08341a;
   --color-primary-700:#2e7d3a;
   --color-primary-500:#4f8a55;
@@ -18,33 +11,28 @@
   --color-secondary-500:#3b82c4;
   --color-secondary-300:#9ec7ef;
 
-  /* Neutros */
   --color-neutral-900:#0b0b0b;
   --color-neutral-700:#333333;
   --color-neutral-500:#737373;
   --color-neutral-300:#d1d5db;
   --color-neutral-100:#f3f4f6;
 
-  /* Semânticos */
   --color-success:#16a34a;
   --color-warning:#f59e0b;
   --color-danger:#ef4444;
   --color-info:#0ea5e9;
 
-  /* Background / surfaces */
   --bg-page: var(--color-neutral-100);
   --surface-1: #ffffff;
   --surface-2: #f8fafc;
 
-  /* Typography scale (>=5 sizes) */
-  --fs-xxl: 2.25rem; /* 36px */
-  --fs-xl: 1.75rem;  /* 28px */
-  --fs-lg: 1.25rem;  /* 20px */
-  --fs-md: 1rem;     /* 16px */
-  --fs-sm: 0.875rem; /* 14px */
-  --fs-xs: 0.75rem;  /* 12px */
-
-  /* Spacing modular system */
+  --fs-xxl: 2.25rem; 
+  --fs-xl: 1.75rem;  
+  --fs-lg: 1.25rem;  
+  --fs-md: 1rem;     
+  --fs-sm: 0.875rem; 
+  --fs-xs: 0.75rem;  
+  
   --space-8: 8px;
   --space-16: 16px;
   --space-24: 24px;
@@ -52,17 +40,14 @@
   --space-48: 48px;
   --space-64: 64px;
 
-  /* Grid */
   --container-max-width: 1200px;
   --gutter: var(--space-16);
 
-  /* Radii / Shadows */
   --radius-sm: 4px;
   --radius-md: 8px;
   --elevation-1: 0 1px 3px rgba(11,11,11,0.06);
   --elevation-2: 0 4px 16px rgba(11,11,11,0.09);
 
-  /* Breakpoints */
   --bp-xs: 320px;
   --bp-sm: 480px;
   --bp-md: 768px;
@@ -71,7 +56,6 @@
   --bp-xxl: 1440px;
 }
 
-/* Base resets and typography */
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
@@ -84,7 +68,6 @@ body{
   -moz-osx-font-smoothing:grayscale;
 }
 
-/* Container / page layout */
 .container{
   width:100%;
   max-width:var(--container-max-width);
@@ -92,14 +75,13 @@ body{
   padding-inline:var(--gutter);
 }
 
-/* Grid system: 12 columns using CSS Grid */
 .grid-12{
   display:grid;
   grid-template-columns: repeat(12, 1fr);
   gap:var(--gutter);
 }
 
-/* Column helpers (col-1 .. col-12) */
+
 .col-1{grid-column:span 1}
 .col-2{grid-column:span 2}
 .col-3{grid-column:span 3}
@@ -113,7 +95,6 @@ body{
 .col-11{grid-column:span 11}
 .col-12{grid-column:span 12}
 
-/* Flex utilities */
 .flex{display:flex}
 .flex-center{display:flex;align-items:center;justify-content:center}
 .flex-col{display:flex;flex-direction:column}
@@ -122,7 +103,6 @@ body{
 .gap-8{gap:var(--space-8)}
 .gap-16{gap:var(--space-16)}
 
-/* Header / Navigation */
 header.site-header{
   background:linear-gradient(180deg,var(--color-primary-300),var(--color-primary-500));
   color:var(--surface-1);
@@ -132,7 +112,6 @@ header.site-header{
 }
 .brand{font-weight:700;font-size:var(--fs-lg);color:var(--surface-1);text-decoration:none}
 
-/* Navigation: desktop dropdown */
 nav.main-nav{position:relative}
 .main-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:var(--space-16)}
 .main-nav a{color:var(--surface-1);text-decoration:none;padding:8px 10px;border-radius:4px;display:inline-block}
@@ -141,12 +120,10 @@ nav.main-nav{position:relative}
 .main-nav .submenu a{color:var(--color-neutral-900);display:block;padding:10px}
 .main-nav li:hover > .submenu{display:block}
 
-/* Hamburger + Mobile nav (checkbox fallback) */
 .nav-toggle{display:none}
 .hamburger{display:none;background:none;border:0;color:var(--surface-1);font-size:1.25rem}
 .mobile-nav{display:none}
 
-/* Main content sections */
 main{padding:var(--space-24) 0}
 section.card{
   background:var(--surface-1);
@@ -155,7 +132,6 @@ section.card{
   box-shadow:var(--elevation-1);
 }
 
-/* Project cards grid variant */
 .projects-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-16)}
 .project-card{background:var(--surface-1);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--elevation-1);display:flex;flex-direction:column}
 .project-card img{width:100%;height:auto;display:block}
@@ -163,7 +139,6 @@ section.card{
 .project-card h3{margin:0;font-size:var(--fs-md)}
 .project-card .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
 
-/* Buttons */
 .btn{display:inline-flex;align-items:center;gap:8px;border-radius:6px;padding:8px 12px;font-weight:600;cursor:pointer;border:1px solid transparent;transition:all 160ms ease;}
 .btn:focus{outline:3px solid rgba(79,138,85,0.18);outline-offset:2px}
 .btn-primary{background:var(--color-primary-500);color:var(--surface-1)}
@@ -174,21 +149,19 @@ section.card{
 .btn:active{transform:translateY(1px)}
 .btn[disabled],.btn.disabled{opacity:0.5;cursor:not-allowed;transform:none}
 
-/* Form styles + validation visuals */
 .form-group{display:flex;flex-direction:column;gap:6px}
 label{font-size:var(--fs-sm);color:var(--color-neutral-700)}
 input[type="text"],input[type="email"],input[type="tel"],textarea,select{
   padding:10px;border-radius:6px;border:1px solid var(--color-neutral-300);background:var(--surface-2);font-size:var(--fs-md);transition:border-color 120ms,box-shadow 120ms
 }
 input:focus,textarea:focus,select:focus{border-color:var(--color-primary-500);box-shadow:0 4px 12px rgba(79,138,85,0.06);outline:none}
-/* invalid / error state */
+
 input.invalid,textarea.invalid,select.invalid{border-color:var(--color-danger);box-shadow:0 4px 12px rgba(239,68,68,0.06)}
 .field-help{font-size:var(--fs-sm);color:var(--color-neutral-500)}
 .field-error{font-size:var(--fs-sm);color:var(--color-danger);display:none}
-/* helper class to show error */
+
 .has-error .field-error{display:block}
 
-/* Alerts / toasts / modals */
 .alert{padding:12px 16px;border-radius:8px;color:var(--surface-1);display:flex;gap:10px;align-items:center}
 .alert-success{background:linear-gradient(90deg,var(--color-success),#73d08a)}
 .alert-warning{background:linear-gradient(90deg,var(--color-warning),#fbcf6b);color:var(--color-neutral-900)}
@@ -201,23 +174,18 @@ input.invalid,textarea.invalid,select.invalid{border-color:var(--color-danger);b
 .modal{background:var(--surface-1);padding:var(--space-24);border-radius:var(--radius-md);box-shadow:var(--elevation-2);max-width:720px;width:100%}
 .modal-backdrop.show{display:flex}
 
-/* Badges / tags */
 .badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:0.75rem;background:var(--color-secondary-300);color:var(--color-neutral-900)}
 .badge-primary{background:var(--color-primary-300);color:var(--color-neutral-900)}
 .badge-ghost{background:transparent;border:1px solid var(--color-neutral-300);color:var(--color-neutral-700)}
 
-/* Accessibility helpers */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
-/* Layout specific styles (home / projeto / cadastro) */
 .hero{display:grid;align-items:center;background:var(--surface-1);padding:var(--space-32);border-radius:var(--radius-md);box-shadow:var(--elevation-1)}
 
-/* Projects grid default */
 .projects-grid{grid-template-columns:repeat(4,1fr)}
 
-/* Responsive breakpoints (>=5 defined) */
 @media (max-width: calc(var(--bp-xxl) - 1px)){
-  /* >1280 and <=1440 adjustments if needed */
+  
 }
 @media (max-width: calc(var(--bp-xl) - 1px)){
   .projects-grid{grid-template-columns:repeat(3,1fr)}
@@ -228,32 +196,28 @@ input.invalid,textarea.invalid,select.invalid{border-color:var(--color-danger);b
   .main-nav ul{gap:10px}
 }
 @media (max-width: calc(var(--bp-md) - 1px)){
-  /* tablet */
+
   .projects-grid{grid-template-columns:repeat(2,1fr)}
   .col-mobile-stack{grid-column:span 12}
 }
 @media (max-width: calc(var(--bp-sm) - 1px)){
-  /* small tablets / large phones */
+  
   .projects-grid{grid-template-columns:1fr}
   .main-nav ul{display:none}
   .hamburger{display:inline-flex}
   .mobile-nav{display:block;background:var(--surface-1);position:absolute;top:100%;left:0;right:0;padding:var(--space-16);box-shadow:var(--elevation-2);display:none}
-  /* show mobile nav when nav-toggle checked (requires markup) */
+  
   .nav-toggle:checked + .hamburger + .mobile-nav{display:block}
 }
 @media (max-width: calc(var(--bp-xs) - 1px)){
   body{font-size:0.95rem}
 }
 
-/* Small helpers for legacy content in the repo */
 img{max-width:100%;height:auto;display:block}
 h1,h2,h3{color:var(--color-primary-700);margin:0 0 var(--space-16) 0}
 p{line-height:1.6;margin:0 0 var(--space-16) 0}
 
-/* Utility to visually hide elements on mobile */
 .hide-mobile{display:block}
 @media (max-width: calc(var(--bp-sm) - 1px)){
   .hide-mobile{display:none}
 }
-
-/* End of file */
